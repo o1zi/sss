@@ -6,13 +6,8 @@
 <title>خطة رحلة بوكيت - باتونغ</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  @page {
-    size: A4;
-    margin: 10mm 8mm;
-  }
-
+  @page { size: A4; margin: 10mm 8mm; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     font-family: 'Noto Kufi Arabic', sans-serif;
     background: #0a0e1a;
@@ -21,26 +16,22 @@
     line-height: 1.7;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    padding: 0;
   }
-
-  /* ===== BG PATTERN ===== */
   body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background: 
+    background:
       radial-gradient(ellipse 600px 400px at 20% 10%, rgba(13,148,136,0.12) 0%, transparent 70%),
       radial-gradient(ellipse 500px 500px at 80% 80%, rgba(99,102,241,0.08) 0%, transparent 70%),
       radial-gradient(ellipse 300px 300px at 50% 50%, rgba(236,72,153,0.05) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
   }
-
   .container {
     max-width: 780px;
     margin: 0 auto;
-    padding: 16px 14px 40px;
+    padding: 16px 14px 100px;
     position: relative;
     z-index: 1;
   }
@@ -54,34 +45,27 @@
     background: linear-gradient(160deg, #0c1929 0%, #0f2b3d 30%, #0d3d35 60%, #0a2a2e 100%);
     border: 1px solid rgba(13,148,136,0.2);
   }
-
   .hero-bg-pattern {
     position: absolute;
     inset: 0;
     opacity: 0.06;
-    background-image: 
+    background-image:
       repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 21px),
       repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 21px);
   }
-
   .hero-glow {
     position: absolute;
-    width: 250px;
-    height: 250px;
     border-radius: 50%;
     filter: blur(80px);
     opacity: 0.3;
   }
-
-  .hero-glow-1 { top: -80px; right: -60px; background: #0d9488; }
-  .hero-glow-2 { bottom: -60px; left: -40px; background: #6366f1; opacity: 0.2; }
-
+  .hero-glow-1 { width: 250px; height: 250px; top: -80px; right: -60px; background: #0d9488; }
+  .hero-glow-2 { width: 200px; height: 200px; bottom: -60px; left: -40px; background: #6366f1; opacity: 0.2; }
   .hero-content {
     position: relative;
     z-index: 2;
     padding: 36px 28px 28px;
   }
-
   .hero-flags {
     font-size: 28px;
     margin-bottom: 8px;
@@ -89,14 +73,12 @@
     gap: 6px;
     align-items: center;
   }
-
   .hero-flags .divider {
     width: 1px;
     height: 20px;
     background: rgba(255,255,255,0.2);
     margin: 0 6px;
   }
-
   .hero h1 {
     font-size: 26px;
     font-weight: 800;
@@ -107,20 +89,17 @@
     margin-bottom: 6px;
     line-height: 1.3;
   }
-
   .hero-sub {
     font-size: 13px;
     color: rgba(255,255,255,0.5);
     font-weight: 300;
     margin-bottom: 18px;
   }
-
   .hero-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
-
   .hero-stat {
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.08);
@@ -129,9 +108,7 @@
     text-align: center;
     backdrop-filter: blur(10px);
   }
-
   .hero-stat-icon { font-size: 20px; margin-bottom: 4px; display: block; }
-
   .hero-stat-value {
     font-size: 17px;
     font-weight: 800;
@@ -139,7 +116,6 @@
     display: block;
     line-height: 1.2;
   }
-
   .hero-stat-label {
     font-size: 9.5px;
     color: rgba(255,255,255,0.4);
@@ -157,7 +133,6 @@
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: 14px;
   }
-
   .legend-item {
     display: flex;
     align-items: center;
@@ -166,18 +141,142 @@
     color: rgba(255,255,255,0.5);
     font-weight: 500;
   }
-
   .legend-dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     box-shadow: 0 0 8px currentColor;
   }
-
   .legend-dot.b { background: #f59e0b; color: #f59e0b; }
   .legend-dot.l { background: #0d9488; color: #0d9488; }
   .legend-dot.d { background: #818cf8; color: #818cf8; }
   .legend-dot.n { background: #f472b6; color: #f472b6; }
+
+  /* ===== TOURS SECTION ===== */
+  .tours-section {
+    margin-bottom: 24px;
+  }
+  .section-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: #e2e8f0;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title .line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to left, transparent, rgba(255,255,255,0.1));
+  }
+  .tours-note {
+    background: rgba(245,158,11,0.08);
+    border: 1px solid rgba(245,158,11,0.15);
+    border-radius: 12px;
+    padding: 10px 16px;
+    margin-bottom: 14px;
+    font-size: 11px;
+    color: rgba(245,158,11,0.8);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .tour-card {
+    border-radius: 18px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    page-break-inside: avoid;
+  }
+  .tour-card-header {
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    background: linear-gradient(135deg, rgba(13,148,136,0.1), rgba(99,102,241,0.06));
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .tour-card-day {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 2px;
+  }
+  .tour-card-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  .tour-card-name span {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.4);
+    margin-right: 6px;
+  }
+  .tour-card-prices {
+    display: flex;
+    gap: 8px;
+  }
+  .tour-price-pill {
+    padding: 5px 14px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .tour-price-pill.thb {
+    background: rgba(13,148,136,0.15);
+    color: #5eead4;
+    border: 1px solid rgba(13,148,136,0.25);
+  }
+  .tour-price-pill.sar {
+    background: rgba(99,102,241,0.15);
+    color: #a5b4fc;
+    border: 1px solid rgba(99,102,241,0.25);
+  }
+  .tour-card-body {
+    padding: 14px 18px;
+  }
+  .tour-includes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .tour-include-tag {
+    font-size: 10px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.5);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .tour-include-tag.check {
+    background: rgba(34,197,94,0.1);
+    color: #4ade80;
+    border-color: rgba(34,197,94,0.15);
+  }
+  .tour-search-hint {
+    font-size: 10px;
+    color: rgba(255,255,255,0.25);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .tour-search-hint code {
+    background: rgba(255,255,255,0.06);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-family: 'Noto Kufi Arabic', monospace;
+    color: rgba(255,255,255,0.4);
+    font-size: 10px;
+    direction: ltr;
+    display: inline-block;
+  }
 
   /* ===== DAY CARDS ===== */
   .day-card {
@@ -187,14 +286,7 @@
     page-break-inside: avoid;
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.06);
-    transition: transform 0.3s ease, border-color 0.3s ease;
   }
-
-  .day-card:hover {
-    border-color: rgba(13,148,136,0.3);
-    transform: translateY(-2px);
-  }
-
   .day-header {
     padding: 14px 18px;
     display: flex;
@@ -205,13 +297,11 @@
     background: rgba(255,255,255,0.02);
     border-bottom: 1px solid rgba(255,255,255,0.05);
   }
-
   .day-header-right {
     display: flex;
     align-items: center;
     gap: 10px;
   }
-
   .day-number {
     width: 36px;
     height: 36px;
@@ -226,20 +316,17 @@
     flex-shrink: 0;
     box-shadow: 0 4px 15px rgba(13,148,136,0.3);
   }
-
   .day-title {
     font-size: 13.5px;
     font-weight: 600;
     color: #e2e8f0;
     line-height: 1.3;
   }
-
   .day-cost-badge {
     display: flex;
     gap: 8px;
     align-items: center;
   }
-
   .cost-pill {
     padding: 5px 12px;
     border-radius: 10px;
@@ -247,20 +334,33 @@
     font-weight: 700;
     white-space: nowrap;
   }
-
   .cost-pill.thb {
     background: rgba(13,148,136,0.12);
     color: #5eead4;
     border: 1px solid rgba(13,148,136,0.2);
   }
-
   .cost-pill.sar {
     background: rgba(99,102,241,0.12);
     color: #a5b4fc;
     border: 1px solid rgba(99,102,241,0.2);
   }
-
   .day-body { padding: 6px 14px 14px; }
+
+  /* Tour banner inside day card */
+  .tour-mini-banner {
+    margin: 10px 4px 6px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(13,148,136,0.08), rgba(99,102,241,0.05));
+    border: 1px dashed rgba(13,148,136,0.25);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+  }
+  .tour-mini-banner .tmb-icon { font-size: 18px; flex-shrink: 0; }
+  .tour-mini-banner .tmb-text { color: rgba(255,255,255,0.5); line-height: 1.5; }
+  .tour-mini-banner .tmb-text strong { color: #5eead4; }
 
   .meal-row {
     display: grid;
@@ -270,9 +370,7 @@
     padding: 10px 4px;
     border-bottom: 1px solid rgba(255,255,255,0.04);
   }
-
   .meal-row:last-child { border-bottom: none; padding-bottom: 4px; }
-
   .meal-icon {
     width: 28px;
     height: 28px;
@@ -284,26 +382,30 @@
     flex-shrink: 0;
     margin-top: 1px;
   }
-
   .meal-icon.b { background: rgba(245,158,11,0.12); }
   .meal-icon.l { background: rgba(13,148,136,0.12); }
   .meal-icon.d { background: rgba(129,140,248,0.12); }
   .meal-icon.n { background: rgba(244,114,182,0.12); }
-
   .meal-info { min-width: 0; }
-
   .meal-name {
     font-size: 12.5px;
     color: #e2e8f0;
     font-weight: 500;
     line-height: 1.5;
   }
-
   .meal-name strong {
     color: #ffffff;
     font-weight: 700;
   }
-
+  .meal-en {
+    font-size: 10px;
+    color: rgba(255,255,255,0.25);
+    font-weight: 300;
+    direction: ltr;
+    text-align: right;
+    display: block;
+    margin-top: 1px;
+  }
   .free-tag {
     display: inline-block;
     background: linear-gradient(135deg, rgba(34,197,94,0.2), rgba(34,197,94,0.1));
@@ -316,7 +418,6 @@
     border: 1px solid rgba(34,197,94,0.2);
     vertical-align: middle;
   }
-
   .meal-prices {
     display: flex;
     flex-direction: column;
@@ -324,7 +425,6 @@
     gap: 3px;
     flex-shrink: 0;
   }
-
   .price-tag {
     font-size: 10.5px;
     font-weight: 700;
@@ -332,52 +432,28 @@
     border-radius: 8px;
     white-space: nowrap;
   }
-
   .price-tag.thb {
     background: rgba(13,148,136,0.1);
     color: #5eead4;
   }
-
   .price-tag.sar {
     background: rgba(99,102,241,0.1);
     color: #a5b4fc;
     font-size: 9.5px;
   }
-
   .price-tag.free {
     background: rgba(34,197,94,0.1);
     color: #4ade80;
   }
 
   /* ===== SUMMARY ===== */
-  .summary-section {
-    margin-top: 24px;
-    page-break-inside: avoid;
-  }
-
-  .section-title {
-    font-size: 18px;
-    font-weight: 800;
-    color: #e2e8f0;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .section-title .line {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(to left, transparent, rgba(255,255,255,0.1));
-  }
-
+  .summary-section { margin-top: 24px; page-break-inside: avoid; }
   .summary-card {
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: 18px;
     overflow: hidden;
   }
-
   .summary-row {
     display: grid;
     grid-template-columns: 1fr 1.5fr auto auto;
@@ -386,9 +462,7 @@
     align-items: center;
     border-bottom: 1px solid rgba(255,255,255,0.04);
   }
-
   .summary-row:last-child { border-bottom: none; }
-
   .summary-row-header {
     background: rgba(255,255,255,0.04);
     padding: 10px 18px;
@@ -398,20 +472,17 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
-
   .summary-item-name {
     font-size: 12.5px;
     font-weight: 700;
     color: #e2e8f0;
   }
-
   .summary-item-detail {
     font-size: 10.5px;
     color: rgba(255,255,255,0.4);
     font-weight: 300;
     line-height: 1.5;
   }
-
   .summary-price-thb {
     font-size: 12px;
     font-weight: 700;
@@ -419,7 +490,6 @@
     text-align: left;
     white-space: nowrap;
   }
-
   .summary-price-sar {
     font-size: 12px;
     font-weight: 700;
@@ -427,28 +497,15 @@
     text-align: left;
     white-space: nowrap;
   }
-
   .summary-row.total {
     background: linear-gradient(135deg, rgba(13,148,136,0.1), rgba(99,102,241,0.08));
     border-bottom: none;
     border-top: 2px solid rgba(13,148,136,0.3);
     padding: 18px;
   }
-
-  .summary-row.total .summary-item-name {
-    font-size: 14px;
-    color: #ffffff;
-  }
-
-  .summary-row.total .summary-price-thb {
-    font-size: 14px;
-    color: #5eead4;
-  }
-
-  .summary-row.total .summary-price-sar {
-    font-size: 15px;
-    color: #c7d2fe;
-  }
+  .summary-row.total .summary-item-name { font-size: 14px; color: #ffffff; }
+  .summary-row.total .summary-price-thb { font-size: 14px; color: #5eead4; }
+  .summary-row.total .summary-price-sar { font-size: 15px; color: #c7d2fe; }
 
   /* ===== GRAND TOTAL ===== */
   .grand-total {
@@ -460,46 +517,37 @@
     background: linear-gradient(160deg, #0c2d2b 0%, #0f1f3d 40%, #1a1040 100%);
     border: 1px solid rgba(13,148,136,0.3);
   }
-
   .grand-total-glow {
     position: absolute;
-    width: 200px;
-    height: 200px;
     border-radius: 50%;
     filter: blur(70px);
     opacity: 0.25;
   }
-
-  .grand-total-glow-1 { top: -60px; right: -40px; background: #0d9488; }
-  .grand-total-glow-2 { bottom: -60px; left: -30px; background: #6366f1; }
-
+  .grand-total-glow-1 { width: 200px; height: 200px; top: -60px; right: -40px; background: #0d9488; }
+  .grand-total-glow-2 { width: 200px; height: 200px; bottom: -60px; left: -30px; background: #6366f1; }
   .grand-total-content {
     position: relative;
     z-index: 2;
     padding: 28px 24px;
     text-align: center;
   }
-
   .grand-total-label {
     font-size: 12px;
     color: rgba(255,255,255,0.5);
     font-weight: 400;
     margin-bottom: 4px;
   }
-
   .grand-total-note {
     font-size: 10px;
     color: rgba(255,255,255,0.3);
     margin-bottom: 16px;
   }
-
   .grand-total-amounts {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
   }
-
   .grand-amount {
     padding: 12px 28px;
     border-radius: 16px;
@@ -507,17 +555,14 @@
     border: 1px solid rgba(255,255,255,0.08);
     backdrop-filter: blur(10px);
   }
-
   .grand-amount-value {
     font-size: 30px;
     font-weight: 900;
     line-height: 1.2;
     display: block;
   }
-
   .grand-amount-value.sar-val { color: #a5b4fc; }
   .grand-amount-value.thb-val { color: #5eead4; }
-
   .grand-amount-label {
     font-size: 10px;
     color: rgba(255,255,255,0.4);
@@ -547,7 +592,6 @@
     background: linear-gradient(to top, #0a0e1a 60%, transparent);
     pointer-events: none;
   }
-
   .print-btn {
     pointer-events: all;
     width: 100%;
@@ -569,7 +613,6 @@
     box-shadow: 0 8px 30px rgba(13,148,136,0.4);
     transition: transform 0.2s, box-shadow 0.2s;
   }
-
   .print-btn:active {
     transform: scale(0.97);
     box-shadow: 0 4px 15px rgba(13,148,136,0.3);
@@ -579,7 +622,7 @@
   @media (max-width: 600px) {
     .hero-content { padding: 28px 20px 22px; }
     .hero h1 { font-size: 21px; }
-    .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .hero-stats { gap: 8px; }
     .hero-stat { padding: 10px 8px; }
     .hero-stat-value { font-size: 15px; }
     .day-header { padding: 12px 14px; }
@@ -588,24 +631,28 @@
     .day-body { padding: 4px 10px 12px; }
     .meal-row { grid-template-columns: 26px 1fr auto; gap: 8px; padding: 8px 2px; }
     .meal-name { font-size: 11.5px; }
+    .meal-en { font-size: 9px; }
     .price-tag { font-size: 9.5px; padding: 2px 8px; }
     .price-tag.sar { font-size: 8.5px; }
-    .summary-row { grid-template-columns: 1fr 1.2fr auto auto; gap: 6px; padding: 12px 14px; font-size: 11px; }
+    .summary-row { grid-template-columns: 1fr 1.2fr auto auto; gap: 6px; padding: 12px 14px; }
     .summary-row-header { display: none; }
     .grand-total-amounts { flex-direction: column; gap: 10px; align-items: center; }
     .grand-amount { width: 100%; max-width: 220px; }
     .grand-amount-value { font-size: 26px; }
-    .container { padding: 12px 10px 80px; }
+    .container { padding: 12px 10px 100px; }
     .legend { gap: 10px; padding: 10px 12px; }
     .legend-item { font-size: 10px; }
+    .tour-card-header { padding: 12px 14px; }
+    .tour-card-name { font-size: 13px; }
+    .tour-card-body { padding: 12px 14px; }
+    .tour-price-pill { font-size: 11px; padding: 4px 10px; }
+    .tour-mini-banner { flex-wrap: wrap; }
   }
-
   @media (max-width: 380px) {
     .hero h1 { font-size: 18px; }
     .day-cost-badge { flex-direction: column; gap: 4px; align-items: flex-end; }
-    .meal-prices { gap: 2px; }
+    .tour-card-prices { flex-direction: column; gap: 4px; }
   }
-
   @media print {
     .print-btn-wrap { display: none !important; }
     body { background: #0a0e1a; }
@@ -627,9 +674,7 @@
     <div class="hero-glow hero-glow-1"></div>
     <div class="hero-glow hero-glow-2"></div>
     <div class="hero-content">
-      <div class="hero-flags">
-        🇹🇭 <div class="divider"></div> 🇸🇦
-      </div>
+      <div class="hero-flags">🇹🇭 <div class="divider"></div> 🇸🇦</div>
       <h1>خطة رحلة بوكيت — باتونغ</h1>
       <p class="hero-sub">📅 الجدول الغذائي والسياحي اليومي — 9 ليالي</p>
       <div class="hero-stats">
@@ -644,7 +689,7 @@
           <span class="hero-stat-label">رحلات بحرية</span>
         </div>
         <div class="hero-stat">
-          <span class="hero-stat-icon"> nightlife</span>
+          <span class="hero-stat-icon">🍸</span>
           <span class="hero-stat-value">9</span>
           <span class="hero-stat-label">أمسيات</span>
         </div>
@@ -659,6 +704,92 @@
     <div class="legend-item"><div class="legend-dot d"></div> عشاء</div>
     <div class="legend-item"><div class="legend-dot n"></div> فعالية ليلية</div>
   </div>
+
+  <!-- ===== TOURS SECTION ===== -->
+  <div class="tours-section">
+    <div class="section-title">🚢 الرحلات البحرية <div class="line"></div></div>
+
+    <div class="tours-note">⚡ الأسعار المتوسطة عند الحجز من مكاتب السياحة المحلية (مثل مرحبا تور) — أرخص من حجز الفندق بـ 30-50%</div>
+
+    <!-- Tour 1: James Bond -->
+    <div class="tour-card">
+      <div class="tour-card-header">
+        <div>
+          <div class="tour-card-day">اليوم 3</div>
+          <div class="tour-card-name">جيمس بوند آيلاند <span>James Bond Island</span></div>
+        </div>
+        <div class="tour-card-prices">
+          <span class="tour-price-pill thb">1,500 بات</span>
+          <span class="tour-price-pill sar">150 ريال</span>
+        </div>
+      </div>
+      <div class="tour-card-body">
+        <div class="tour-includes">
+          <span class="tour-include-tag check">✓ نقل ذهاب وإياب</span>
+          <span class="tour-include-tag check">✓ قارب سريع / لونج تايل</span>
+          <span class="tour-include-tag check">✓ بوفيه غداء</span>
+          <span class="tour-include-tag check">✓ أقنعة سباحة</span>
+          <span class="tour-include-tag check">✓ دليل عربي</span>
+          <span class="tour-include-tag">✗ مشروبات إضافية</span>
+          <span class="tour-include-tag">✗ حجز كانو خاص</span>
+        </div>
+        <div class="tour-search-hint">🔍 ابحث في Google Maps: <code>James Bond Island Tour Phuket</code></div>
+      </div>
+    </div>
+
+    <!-- Tour 2: Phi Phi -->
+    <div class="tour-card">
+      <div class="tour-card-header">
+        <div>
+          <div class="tour-card-day">اليوم 5</div>
+          <div class="tour-card-name">في في آيلاند <span>Phi Phi Island</span></div>
+        </div>
+        <div class="tour-card-prices">
+          <span class="tour-price-pill thb">1,800 بات</span>
+          <span class="tour-price-pill sar">180 ريال</span>
+        </div>
+      </div>
+      <div class="tour-card-body">
+        <div class="tour-includes">
+          <span class="tour-include-tag check">✓ نقل ذهاب وإياب</span>
+          <span class="tour-include-tag check">✓ سفينة سريعة (Speedboat)</span>
+          <span class="tour-include-tag check">✓ بوفيه غداء</span>
+          <span class="tour-include-tag check">✓ أقنعة سباحة</span>
+          <span class="tour-include-tag check">✓ دليل عربي</span>
+          <span class="tour-include-tag check">✓ موية</span>
+          <span class="tour-include-tag">✗ رسوم متنزه في في (400 بات)</span>
+        </div>
+        <div class="tour-search-hint">🔍 ابحث في Google Maps: <code>Phi Phi Island Tour by Speedboat</code></div>
+      </div>
+    </div>
+
+    <!-- Tour 3: Coral Island -->
+    <div class="tour-card">
+      <div class="tour-card-header">
+        <div>
+          <div class="tour-card-day">اليوم 7</div>
+          <div class="tour-card-name">كورال آيلاند <span>Coral Island (Koh Hae)</span></div>
+        </div>
+        <div class="tour-card-prices">
+          <span class="tour-price-pill thb">1,200 بات</span>
+          <span class="tour-price-pill sar">120 ريال</span>
+        </div>
+      </div>
+      <div class="tour-card-body">
+        <div class="tour-includes">
+          <span class="tour-include-tag check">✓ نقل ذهاب وإياب</span>
+          <span class="tour-include-tag check">✓ قارب نقل (10 دقائق)</span>
+          <span class="tour-include-tag check">✓ بوفيه غداء</span>
+          <span class="tour-include-tag check">✓ أقنعة سباحة</span>
+          <span class="tour-include-tag">✗ دليل عربي (غالباً لا يحتاج)</span>
+          <span class="tour-include-tag">✗ أنشطة مائية (باراشوت إلخ)</span>
+        </div>
+        <div class="tour-search-hint">🔍 ابحث في Google Maps: <code>Coral Island Tour Phuket</code></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DAY CARDS ===== -->
 
   <!-- Day 1 -->
   <div class="day-card">
@@ -675,7 +806,10 @@
     <div class="day-body">
       <div class="meal-row">
         <div class="meal-icon b">☀️</div>
-        <div class="meal-info"><div class="meal-name"><strong>7-Eleven:</strong> ساندويتش هام وجبن + قهوة Iced Coffee</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>7-Eleven:</strong> ساندويتش هام وجبن + قهوة مثلجة</div>
+          <span class="meal-en">Ham & Cheese Sandwich + Iced Coffee</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">80 بات</span>
           <span class="price-tag sar">8 ريال</span>
@@ -683,7 +817,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon l">📍</div>
-        <div class="meal-info"><div class="meal-name"><strong>Street Food:</strong> نودلز مقلية بالجمبري (Pad Thai Goong)</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>أكشاك الشارع:</strong> باد تاي بالجمبري</div>
+          <span class="meal-en">Pad Thai Goong — Street Food</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">80 بات</span>
           <span class="price-tag sar">8 ريال</span>
@@ -691,7 +828,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon d">🌙</div>
-        <div class="meal-info"><div class="meal-name"><strong>Muslim Restaurant:</strong> دجاج برياني + حساء</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Muslim Restaurant:</strong> دجاج برياني + حساء</div>
+          <span class="meal-en">Chicken Biryani + Soup</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">350 بات</span>
           <span class="price-tag sar">35 ريال</span>
@@ -699,7 +839,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon n">🌃</div>
-        <div class="meal-info"><div class="meal-name"><strong>Illuzion Nightclub:</strong> كوب واحد + تاكسي</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Illuzion Nightclub:</strong> كوب واحد + تاكسي</div>
+          <span class="meal-en">1 Drink + Taxi</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">400 بات</span>
           <span class="price-tag sar">40 ريال</span>
@@ -723,7 +866,10 @@
     <div class="day-body">
       <div class="meal-row">
         <div class="meal-icon b">☀️</div>
-        <div class="meal-info"><div class="meal-name"><strong>7-Eleven:</strong> عصير برتقال طازج + معجنات محلاة</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>7-Eleven:</strong> عصير برتقال طازج + معجنات محلاة</div>
+          <span class="meal-en">Fresh Orange Juice + Sweet Pastry</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">100 بات</span>
           <span class="price-tag sar">10 ريال</span>
@@ -731,7 +877,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon l">📍</div>
-        <div class="meal-info"><div class="meal-name"><strong>Jungceylon Food Court:</strong> دجاج بالأرز (Khao Man Gai)</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Jungceylon Food Court:</strong> دجاج بالأرز</div>
+          <span class="meal-en">Khao Man Gai — Chicken Rice</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">120 بات</span>
           <span class="price-tag sar">12 ريال</span>
@@ -739,7 +888,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon d">🌙</div>
-        <div class="meal-info"><div class="meal-name"><strong>Banzaan Market:</strong> جمبري وسمك مشوي (يطبخونه لك)</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Banzaan Fresh Market:</strong> جمبري وسمك مشوي</div>
+          <span class="meal-en">Grilled Prawn & Fish — Cooked at Market</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">800 بات</span>
           <span class="price-tag sar">80 ريال</span>
@@ -747,7 +899,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon n">🌃</div>
-        <div class="meal-info"><div class="meal-name"><strong>Paradise Beach Club:</strong> كوب واحد + تاكسي</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Paradise Beach Club:</strong> كوب واحد + تاكسي</div>
+          <span class="meal-en">1 Drink + Taxi</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">350 بات</span>
           <span class="price-tag sar">35 ريال</span>
@@ -769,9 +924,16 @@
       </div>
     </div>
     <div class="day-body">
+      <div class="tour-mini-banner">
+        <span class="tmb-icon">🚢</span>
+        <div class="tmb-text">رحلة <strong>جيمس بوند آيلاند</strong> — سعر الرحلة: <strong>1,500 بات (150 ريال)</strong> — الغداء مشمول</div>
+      </div>
       <div class="meal-row">
         <div class="meal-icon b">☀️</div>
-        <div class="meal-info"><div class="meal-name"><strong>7-Eleven:</strong> بان كيك بالشوكولاتة + قهوة</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>7-Eleven:</strong> بان كيك بالشوكولاتة + قهوة</div>
+          <span class="meal-en">Chocolate Pancake + Coffee</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">80 بات</span>
           <span class="price-tag sar">8 ريال</span>
@@ -779,7 +941,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon l">📍</div>
-        <div class="meal-info"><div class="meal-name"><span class="free-tag">مشمول ✅</span> رحلة جيمس بوند — بوفيه مفتوح</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><span class="free-tag">مشمول ✅</span> بوفيه مفتوح بالرحلة</div>
+          <span class="meal-en">Buffet Lunch — Included in Tour</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag free">مجاني</span>
           <span class="price-tag free">—</span>
@@ -787,7 +952,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon d">🌙</div>
-        <div class="meal-info"><div class="meal-name"><strong>Mr. Good Seafood:</strong> جمبري بالثوم والزبدة + أرز مقلي</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Mr. Good Seafood:</strong> جمبري بالثوم والزبدة + أرز مقلي</div>
+          <span class="meal-en">Garlic Butter Prawn + Fried Rice</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">600 بات</span>
           <span class="price-tag sar">60 ريال</span>
@@ -795,7 +963,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon n">🌃</div>
-        <div class="meal-info"><div class="meal-name"><strong>استراحة بالفندق:</strong> مشروب من 7-Eleven وارتاحة</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>استراحة بالفندق:</strong> مشروب من 7-Eleven</div>
+          <span class="meal-en">Drink from 7-Eleven — Rest at Hotel</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">100 بات</span>
           <span class="price-tag sar">10 ريال</span>
@@ -819,7 +990,10 @@
     <div class="day-body">
       <div class="meal-row">
         <div class="meal-icon b">☀️</div>
-        <div class="meal-info"><div class="meal-name"><strong>7-Eleven:</strong> بيض مسلوق + ساندويتش لحم</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>7-Eleven:</strong> بيض مسلوق + ساندويتش لحم</div>
+          <span class="meal-en">Boiled Eggs + Meat Sandwich</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">80 بات</span>
           <span class="price-tag sar">8 ريال</span>
@@ -827,7 +1001,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon l">📍</div>
-        <div class="meal-info"><div class="meal-name"><strong>Tu Kab Khao:</strong> كاري ماسمان بالدجاج + أرز</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Tu Kab Khao:</strong> كاري ماسمان بالدجاج + أرز</div>
+          <span class="meal-en">Chicken Massaman Curry + Rice</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">350 بات</span>
           <span class="price-tag sar">35 ريال</span>
@@ -835,7 +1012,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon d">🌙</div>
-        <div class="meal-info"><div class="meal-name"><strong>Chillva Night Market:</strong> أسياخ مشوية + أرز لزج بالمانجو</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Chillva Night Market:</strong> أسياخ مشوية + أرز لزج بالمانجو</div>
+          <span class="meal-en">Grilled Skewers + Mango Sticky Rice</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">400 بات</span>
           <span class="price-tag sar">40 ريال</span>
@@ -843,7 +1023,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon n">🌃</div>
-        <div class="meal-info"><div class="meal-name"><strong>Tiger Nightclub:</strong> كوب واحد + تاكسي</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Tiger Nightclub:</strong> كوب واحد + تاكسي</div>
+          <span class="meal-en">1 Drink + Taxi</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">400 بات</span>
           <span class="price-tag sar">40 ريال</span>
@@ -865,9 +1048,16 @@
       </div>
     </div>
     <div class="day-body">
+      <div class="tour-mini-banner">
+        <span class="tmb-icon">🚢</span>
+        <div class="tmb-text">رحلة <strong>في في آيلاند</strong> — سعر الرحلة: <strong>1,800 بات (180 ريال)</strong> — الغداء مشمول + رسوم متنزه في في (400 بات) غير مشمولة</div>
+      </div>
       <div class="meal-row">
         <div class="meal-icon b">☀️</div>
-        <div class="meal-info"><div class="meal-name"><strong>7-Eleven:</strong> عصير + كرواسون</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>7-Eleven:</strong> عصير + كرواسون</div>
+          <span class="meal-en">Juice + Croissant</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">80 بات</span>
           <span class="price-tag sar">8 ريال</span>
@@ -875,7 +1065,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon l">📍</div>
-        <div class="meal-info"><div class="meal-name"><span class="free-tag">مشمول ✅</span> رحلة في في آيلاند — بوفيه</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><span class="free-tag">مشمول ✅</span> بوفيه مفتوح بالرحلة</div>
+          <span class="meal-en">Buffet Lunch — Included in Tour</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag free">مجاني</span>
           <span class="price-tag free">—</span>
@@ -883,7 +1076,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon d">🌙</div>
-        <div class="meal-info"><div class="meal-name"><strong>No.6 Restaurant:</strong> سمك مقلي بصلصة السمك الحار + أرز</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>No.6 Restaurant:</strong> سمك مقلي بصلصة السمك الحار + أرز</div>
+          <span class="meal-en">Deep-Fried Fish with Spicy Fish Sauce + Rice</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">350 بات</span>
           <span class="price-tag sar">35 ريال</span>
@@ -891,7 +1087,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon n">🌃</div>
-        <div class="meal-info"><div class="meal-name"><strong>استراحة بالفندق:</strong> تعب من الرحلة البحرية</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>استراحة بالفندق:</strong> تعب من الرحلة البحرية</div>
+          <span class="meal-en">Rest at Hotel — Tired from Sea Trip</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">100 بات</span>
           <span class="price-tag sar">10 ريال</span>
@@ -915,7 +1114,10 @@
     <div class="day-body">
       <div class="meal-row">
         <div class="meal-icon b">☀️</div>
-        <div class="meal-info"><div class="meal-name"><strong>7-Eleven:</strong> ساندويتش بيكون + قهوة</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>7-Eleven:</strong> ساندويتش بيكون + قهوة</div>
+          <span class="meal-en">Bacon Sandwich + Coffee</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">80 بات</span>
           <span class="price-tag sar">8 ريال</span>
@@ -923,7 +1125,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon l">📍</div>
-        <div class="meal-info"><div class="meal-name"><strong>7-Eleven:</strong> كاري أخضر دجاج (تسخين بالميكروويف)</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>7-Eleven:</strong> كاري أخضر دجاج (ميكروويف)</div>
+          <span class="meal-en">Green Curry Chicken — Microwave Meal</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">60 بات</span>
           <span class="price-tag sar">6 ريال</span>
@@ -931,7 +1136,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon d">🌙</div>
-        <div class="meal-info"><div class="meal-name"><strong>Roti Taew Nam:</strong> حساء دجاج تايلاندي مع خبز روتي (وجبتين)</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Roti Taew Nam:</strong> حساء دجاج تايلاندي مع خبز روتي (وجبتين)</div>
+          <span class="meal-en">Thai Chicken Soup with Roti Bread (2 Portions)</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">300 بات</span>
           <span class="price-tag sar">30 ريال</span>
@@ -939,7 +1147,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon n">🌃</div>
-        <div class="meal-info"><div class="meal-name"><strong>Xuze Beach Club:</strong> كوب واحد + تاكسي</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Xuze Beach Club:</strong> كوب واحد + تاكسي</div>
+          <span class="meal-en">1 Drink + Taxi</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">350 بات</span>
           <span class="price-tag sar">35 ريال</span>
@@ -961,9 +1172,16 @@
       </div>
     </div>
     <div class="day-body">
+      <div class="tour-mini-banner">
+        <span class="tmb-icon">🚢</span>
+        <div class="tmb-text">رحلة <strong>كورال آيلاند</strong> — سعر الرحلة: <strong>1,200 بات (120 ريال)</strong> — الغداء مشمول</div>
+      </div>
       <div class="meal-row">
         <div class="meal-icon b">☀️</div>
-        <div class="meal-info"><div class="meal-name"><strong>7-Eleven:</strong> حليب + دونات</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>7-Eleven:</strong> حليب + دونات</div>
+          <span class="meal-en">Milk + Donut</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">80 بات</span>
           <span class="price-tag sar">8 ريال</span>
@@ -971,7 +1189,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon l">📍</div>
-        <div class="meal-info"><div class="meal-name"><span class="free-tag">مشمول ✅</span> رحلة كورال آيلاند — بوفيه</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><span class="free-tag">مشمول ✅</span> بوفيه مفتوح بالرحلة</div>
+          <span class="meal-en">Buffet Lunch — Included in Tour</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag free">مجاني</span>
           <span class="price-tag free">—</span>
@@ -979,7 +1200,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon d">🌙</div>
-        <div class="meal-info"><div class="meal-name"><strong>Kan Eang@Pier:</strong> سمك القاروص المشوي + سلطة مأكولات بحرية</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Kan Eang@Pier:</strong> سمك القاروص المشوي + سلطة مأكولات بحرية</div>
+          <span class="meal-en">Grilled Sea Bass + Seafood Salad</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">800 بات</span>
           <span class="price-tag sar">80 ريال</span>
@@ -987,7 +1211,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon n">🌃</div>
-        <div class="meal-info"><div class="meal-name"><strong>Seduction Nightclub:</strong> كوب واحد + تاكسي</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Seduction Nightclub:</strong> كوب واحد + تاكسي</div>
+          <span class="meal-en">1 Drink + Taxi</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">400 بات</span>
           <span class="price-tag sar">40 ريال</span>
@@ -1011,7 +1238,10 @@
     <div class="day-body">
       <div class="meal-row">
         <div class="meal-icon b">☀️</div>
-        <div class="meal-info"><div class="meal-name"><strong>7-Eleven:</strong> ساندويتش + عصير</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>7-Eleven:</strong> ساندويتش + عصير</div>
+          <span class="meal-en">Sandwich + Juice</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">80 بات</span>
           <span class="price-tag sar">8 ريال</span>
@@ -1019,7 +1249,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon l">📍</div>
-        <div class="meal-info"><div class="meal-name"><strong>مطعم محلي بكامالا:</strong> Pad Thai + سبرنغ رول</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>مطعم محلي بكامالا:</strong> باد تاي + سبرنغ رول</div>
+          <span class="meal-en">Pad Thai + Spring Rolls — Kamala Local</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">200 بات</span>
           <span class="price-tag sar">20 ريال</span>
@@ -1027,7 +1260,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon d">🌙</div>
-        <div class="meal-info"><div class="meal-name"><strong>Phuket Walking Street:</strong> أكل شوارع (ساشيمي، حلويات)</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Phuket Walking Street:</strong> أكل شوارع متنوع (ساشيمي، حلويات)</div>
+          <span class="meal-en">Mixed Street Food — Sashimi, Sweets</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">500 بات</span>
           <span class="price-tag sar">50 ريال</span>
@@ -1035,7 +1271,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon n">🌃</div>
-        <div class="meal-info"><div class="meal-name"><strong>White Room Nightclub:</strong> كوب واحد + تاكسي</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>White Room Nightclub:</strong> كوب واحد + تاكسي</div>
+          <span class="meal-en">1 Drink + Taxi</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">400 بات</span>
           <span class="price-tag sar">40 ريال</span>
@@ -1059,7 +1298,10 @@
     <div class="day-body">
       <div class="meal-row">
         <div class="meal-icon b">☀️</div>
-        <div class="meal-info"><div class="meal-name"><strong>7-Eleven:</strong> توست بالزبدة + قهوة</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>7-Eleven:</strong> توست بالزبدة + قهوة</div>
+          <span class="meal-en">Butter Toast + Coffee</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">80 بات</span>
           <span class="price-tag sar">8 ريال</span>
@@ -1067,7 +1309,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon l">📍</div>
-        <div class="meal-info"><div class="meal-name"><strong>Muslim Restaurant:</strong> شاورما دجاج + بطاطس</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Muslim Restaurant:</strong> شاورما دجاج + بطاطس</div>
+          <span class="meal-en">Chicken Shawarma + Fries</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">150 بات</span>
           <span class="price-tag sar">15 ريال</span>
@@ -1075,7 +1320,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon d">🌙</div>
-        <div class="meal-info"><div class="meal-name"><strong>Bangla Street Restaurant:</strong> توم يام بالجمبري + أرز مقلي بالسرطان</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Bangla Street Restaurant:</strong> توم يام بالجمبري + أرز مقلي بالسرطان</div>
+          <span class="meal-en">Tom Yum Goong + Crab Fried Rice</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">400 بات</span>
           <span class="price-tag sar">40 ريال</span>
@@ -1083,7 +1331,10 @@
       </div>
       <div class="meal-row">
         <div class="meal-icon n">🌃</div>
-        <div class="meal-info"><div class="meal-name"><strong>Paradise Beach Club:</strong> كوب وداع + تاكسي</div></div>
+        <div class="meal-info">
+          <div class="meal-name"><strong>Paradise Beach Club:</strong> كوب وداع + تاكسي</div>
+          <span class="meal-en">Farewell Drink + Taxi</span>
+        </div>
         <div class="meal-prices">
           <span class="price-tag thb">350 بات</span>
           <span class="price-tag sar">35 ريال</span>
@@ -1092,12 +1343,9 @@
     </div>
   </div>
 
-  <!-- Summary -->
+  <!-- ===== SUMMARY ===== -->
   <div class="summary-section">
-    <div class="section-title">
-      💰 ملخص الحسابات
-      <div class="line"></div>
-    </div>
+    <div class="section-title">💰 ملخص الحسابات <div class="line"></div></div>
     <div class="summary-card">
       <div class="summary-row summary-row-header">
         <div>البند</div>
@@ -1138,7 +1386,7 @@
     <div class="grand-total-glow grand-total-glow-2"></div>
     <div class="grand-total-content">
       <div class="grand-total-label">التكلفة الإجمالية للرحلة — 9 ليالي</div>
-      <div class="grand-total-note">بدون تذاكر الطيران والفندق</div>
+      <div class="grand-total-note">بدون تذاكر الطيران والفندق — أسعار الرحلات متوسطة (مكاتب سياحة محلية)</div>
       <div class="grand-total-amounts">
         <div class="grand-amount">
           <span class="grand-amount-value sar-val">1,545</span>
@@ -1155,16 +1403,15 @@
   <!-- Footer -->
   <div class="footer">
     🌴 خطة رحلة بوكيت — باتونغ<br>
-    جميع الأسعار تقديرية وقد تتغير حسب سعر الصرف والموسم
+    جميع الأسعار تقديرية وقد تتغير حسب سعر الصرف والموسم ومكان الحجز<br>
+    أسعار الرحلات البحرية هي المتوسط عند الحجز من مكاتب السياحة المحلية (مرحبا تور وغيرها)
   </div>
 
 </div>
 
 <!-- Print Button -->
 <div class="print-btn-wrap">
-  <button class="print-btn" onclick="window.print()">
-    🖨️ حفظ كـ PDF
-  </button>
+  <button class="print-btn" onclick="window.print()">🖨️ حفظ كـ PDF</button>
 </div>
 
 </body>
